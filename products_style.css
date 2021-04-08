@@ -1,0 +1,80 @@
+body{
+  background-image: url("Images/nile.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  font-family: "Broadway";
+  color: black;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  font-family: "Adobe Heiti Std";
+  font-size: 20px;
+}
+
+img{
+  height: 300px;
+  width: 150px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar{
+  background-color: black;
+  width: 100%;
+  position: fixed;
+}
+
+.main_title{
+  margin: 0;
+  color: white;
+  font-family: "Brush Script MT";
+  font-size: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+.preview_image{
+    text-align: center;
+    font-family: "Adobe Heiti Std";
+    font-size: 10px;
+    padding-right: 150px;
+    padding-left: 20px;
+}
+
+.logo_image{
+  width: 80px;
+  height: 80px;
+}
+
+.external_links{
+  border-style: none none none solid;
+  border-color: #606060;
+  border-width: 1px;
+  text-align: center;
+  font-family: "Adobe Heiti Std";
+  color: white;
+  font-size: 20px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 500px;
+}
+
+.external_links:hover{
+  font-size: 21px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: grey;
+}
