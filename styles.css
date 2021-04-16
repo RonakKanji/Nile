@@ -333,7 +333,7 @@ a{
     padding-left: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 380px) {
   body{
     background-image: url("Images/phone_bg.jpg");
     background-repeat: no-repeat;
