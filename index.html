@@ -35,57 +35,65 @@
 
     <div id="product_details">
       <h1 class="product_heading">Our Wide Variety of Juices</h1>
-      <table>
-        <tbody>
-          <tr>
-            <td class="preview_image"><img src="Images/Kiwi.png" alt="Kiwi_Juice"></td>
-            <td class="preview_image"><img src="Images/Mango.png" alt="Mango_Juice"></td>
-            <td class="preview_image"><img src="Images/Peach.png" alt="Peach_Juice"></td>
-            <td class="preview_image"><img src="Images/Papaya.png" alt="Papaya_Juice"></td>
 
-          </tr>
-          <tr>
-            <td class="preview_image"><h3>Kiwi Sizzler</h3> </td>
-            <td class="preview_image"><h3>Mango Blast</h3></td>
-            <td class="preview_image"><h3>Peach Punch</h3></td>
-            <td class="preview_image"><h3>Papaya Yaga</h3></td>
-          </tr>
-        </tbody>
-      </table>
-      <a href="products.html"><h2>Check Out More Products Here</h2></a>
+      <div class="kiwi">
+        <img class="preview_image" src="Images/Kiwi.png" alt="Kiwi_Juice">
+        <p class="preview_text">Kiwi Sizzler</p>
+      </div>
+
+      <div class="mango">
+        <img class="preview_image" src="Images/Mango.png" alt="Mango_Juice">
+        <p class="preview_text">Mango Blast</p>
+      </div>
+
+      <div class="peach">
+        <img class="preview_image" src="Images/Peach.png" alt="Peach_Juice">
+          <p class="preview_text">Peach Punch</p>
+      </div>
+
+      <div class="papaya">
+        <img class="preview_image" src="Images/Papaya.png" alt="Papaya_Juice">
+        <p class="preview_text">Papaya Yaga</p>
+      </div>
+      <form action="products.html" method="post">
+        <input class="more_products" type="submit" name="More Products" value="Check Out More Products">
+      </form>
+
     </div>
 
     <div id="why_us">
       <h1 class="why_heading">Why Choose Us?</h1>
 
-      <table>
-        <tbody>
-          <tr>
-            <td class="choose_table">
-              <img class="choose_img" src="Images/natural.png" alt="Natural">
-              <h3>Natural</h3>
-              <p class="choose_p">Our products are 99% made with natural fruits and 1% with love.</p>
-            </td>
-            <td class="choose_table">
-              <img class="choose_img" src="Images/tasty.jpg" alt="Tasty">
-              <h3>Tasty</h3>
-              <p class="choose_p">We aim to give our customers drinks that will make them have more.</p>
-            </td>
-          </tr>
-          <tr>
-            <td class="choose_table">
-              <img class="choose_img" src="Images/healthy.png" alt="Healthy">
-              <h3>Healthy</h3>
-              <p class="choose_p">Our drinks are made with natural ingredients and with the essential vitamins for our body.</p>
-            </td>
-            <td class="choose_table">
-              <img class="choose_img" src="Images/earth.png" alt="Earth">
-              <h3>Economical</h3>
-              <p class="choose_p">Our services make sure that our products are cheap as well as we can do our part by helipng the environment.</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="natural">
+        <img class="choose_img" src="Images/natural.png" alt="Natural">
+        <span class="choose_table">
+          <h3 class="choose_h">Natural</h3>
+          <p class="choose_p">Our products are 99% made with natural fruits and 1% with love.</p>
+        </span>
+      </div>
+      <div class="tasty">
+        <img class="choose_img" src="Images/tasty.jpg" alt="Tasty">
+        <span class="choose_table">
+          <h3 class="choose_h">Tasty</h3>
+          <p class="choose_p">We aim to give our customers drinks that will make them have more.</p>
+        </span>
+      </div>
+
+      <div class="healthy">
+        <img class="choose_img" src="Images/healthy.png" alt="Healthy">
+        <span class="choose_table">
+          <h3 class="choose_h">Healthy</h3>
+          <p class="choose_p">Our drinks are made with natural ingredients and with the essential vitamins for our body.</p>
+        </span>
+      </div>
+
+      <div class="economical">
+        <img class="choose_img" src="Images/earth.png" alt="Earth">
+        <span class="choose_table">
+          <h3 class="choose_h">Economical</h3>
+          <p class="choose_p">Our services make sure that our products are cheap as well as we can do our part by helipng the environment.</p>
+        </span>
+      </div>
     </div>
 
     <div id="download_section">

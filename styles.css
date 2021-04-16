@@ -11,17 +11,12 @@ h1{
 }
 
 h2{
+  margin: 0;
   font-family: "Broadway";
   color: black;
   text-align: center;
 }
 
-h3{
-  margin: 0;
-  text-align: center;
-  font-family: "Adobe Heiti Std";
-  font-size: 20px;
-}
 
 img{
   height: 300px;
@@ -33,9 +28,6 @@ a{
   color: white;
 }
 
-.empty_box{
-  padding: 60px;
-}
 
 /* NAVBAR */
 .navbar{
@@ -90,6 +82,7 @@ a{
 }
 
 
+
 /* ABOUT_US */
 .about{
   padding: 20px;
@@ -126,6 +119,7 @@ a{
 /* PRODUCT_DETAILS */
 #product_details{
   margin: 10px 50px 50px 50px;
+  height: 500px;
   background-color: #d4e2d4;
   padding: 20px;
   border-radius: 25px;
@@ -137,11 +131,91 @@ a{
 }
 
 .preview_image{
-    text-align: center;
-    font-family: "Adobe Heiti Std";
-    font-size: 10px;
-    padding-right: 150px;
-    padding-left: 20px;
+    margin-left: 100px;
+}
+
+.preview_text{
+  padding-left: 5px;
+  margin-left: 20px;
+  text-align: center;
+  font-family: "Adobe Heiti Std";
+  font-size: 20px;
+}
+
+.kiwi{
+  position: absolute;
+  width: 25%;
+}
+
+.mango{
+  position: absolute;
+  left: 350px;
+  top: 810px;
+  width: 25%;
+}
+
+.peach{
+  position: absolute;
+  right: 350px;
+  top: 810px;
+  width: 25%;
+}
+
+.papaya{
+  position: absolute;
+  right: 50px;
+  top: 810px;
+  width: 25%;
+}
+
+.watermelon{
+  position: absolute;
+  left: 350px;
+  width: 25%;
+}
+
+.strawberry{
+  position: absolute;
+  left: 650px;
+  width: 25%;
+}
+
+.avocado{
+  position: absolute;
+  left: 950px;
+  width: 25%;
+}
+
+.blueberry{
+  position: absolute;
+  top: 810px;
+  width: 25%;
+}
+
+.more_products{
+  font-family: "Broadway";
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  background-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+  position: absolute;
+  top: 1190px;
+  left: 500px;
+}
+
+.more_products:hover{
+  font-family: "Broadway";
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  background-color: white;
+  border-width: 1px;
+  border-radius: 10px;
+  position: absolute;
+  top: 1190px;
+  left: 500px;
 }
 
 #why_us{
@@ -149,56 +223,85 @@ a{
   background-color: #df7861;
   padding: 20px;
   margin: 0 50px 50px 50px;
+  height: 650px;
   border-radius: 25px;
 }
 
 .choose_img{
-  padding-left: 130px;
-  width: 130px;
-  height: 130px;
+  margin-left: 290px;
+  width: 100px;
+  height: 100px;
+}
+
+.choose_h{
+  text-align: center;
+  font-family: "Broadway";
 }
 
 .choose_p{
-  margin: 0;
+  width: 50%;
+  margin-left: 160px;
   text-align: center;
   font-family: "Adobe Heiti Std";
   font-size: 15px;
 }
 
 .choose_table{
-  margin: 0;
-  width: 400px;
-  padding-left: 150px;
-  height: 130px;
+  text-align: center;
 }
 
+.natural{
+  position: absolute;
+  width: 50%;
+}
+
+.tasty{
+  position: absolute;
+  right: 50px;
+  width: 50%;
+}
+
+.healthy{
+  position: absolute;
+  top: 1650px;
+  width: 50%;
+}
+
+.economical{
+  position: absolute;
+  top: 1650px;
+  right: 50px;
+  width: 50%;
+}
 /* DOWNLOAD */
 #download_section{
   font-family: "Broadway";
-  margin-left: 350px;
-  width: 50%;
+  margin-left: 100px;
+  width: 30%;
   background-color: #fcf8e8;
   border-radius: 25px;
 }
 .download_logo{
-  margin-left: 50px;
-  padding-left: 50px;
-  width: 200px;
-  height: 100px;
+  margin-left: 70px;
+  width: 100px;
+  height: 50px;
 }
 
 
 /* CONTACT_US */
 #contact_us{
+  position: absolute;
+  right: 120px;
+  top: 2045px;
   font-family: "Broadway";
-  margin: 20px 400px;
-  background-color: #df7861;
+  background-color: #fcf8e8;
   border-radius: 25px;
+  width: 400px;
 }
 .contact_links{
-  padding-left: 50px;
-  width: 50px;
-  height: 50px;
+  padding-left: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -228,4 +331,246 @@ a{
     font-size: 10px;
     padding-right: 0px;
     padding-left: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  body{
+    background-image: url("Images/phone_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 700px;
+    margin: 0;
+  }
+  .navbar{
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    border-radius: 0 0 25px 25px;
+    z-index: 2;
+  }
+
+  .logo_image{
+    width: 90px;
+    height: 90px;
+    padding: 0;
+  }
+
+  .main_title{
+    color: white;
+    font-family: "Brush Script MT";
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .main_p{
+      color: white;
+      font-family: "Broadway";
+      font-size: 10px;
+      text-align: left;
+  }
+
+  .external_links{
+    border-style: none none none solid;
+    border-color: #606060;
+    border-width: 1px;
+    text-align: center;
+    font-family: "Adobe Heiti Std";
+    color: white;
+    font-size: 12px;
+    position: relative;
+    margin: 0px;
+    left: 0;
+  }
+
+  .external_links:hover{
+    font-size: 13px;
+    text-shadow: 2px 2px 4px #000000;
+    background-color: grey;
+  }
+
+  .about{
+    padding: 10px;
+  }
+
+  .about_header{
+    margin: 250px 0 0 100px;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: "Brush Script MT";
+    font-size: 150px;
+    color: black;
+  }
+
+  .about_desc{
+    font-family: "Broadway";
+    font-size: 70px;
+    text-align: center;
+  }
+
+
+  .about_text{
+    position: absolute;
+    left: 30px;
+  }
+
+  #product_details{
+    width: 80%;
+    margin: 50px;
+    background-color: #d4e2d4;
+    padding: 20px;
+    border-radius: 25px;
+    height: 750px;
+  }
+
+  .product_heading{
+    font-family: "Broadway";
+    text-align: center;
+  }
+
+  .preview_image{
+      width: 100px;
+      height: 200px;
+      margin-left: 50px;
+  }
+
+  .preview_text{
+    margin-left: 30px;
+    text-align: center;
+    font-family: "Adobe Heiti Std";
+    font-size: 20px;
+  }
+
+  .kiwi{
+    position: absolute;
+    top: 800px;
+  }
+
+  .mango{
+    position: absolute;
+    top: 800px;
+    right: 50px;
+  }
+
+  .peach{
+    position: absolute;
+    top: 1100px;
+    left: 70px;
+  }
+
+  .papaya{
+    position: absolute;
+    top: 1100px;
+    right: 140px;
+  }
+
+  .more_products{
+    font-family: "Broadway";
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    background-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+    position: absolute;
+    top: 1400px;
+    left: 170px;
+  }
+
+  .more_products:hover{
+    font-family: "Broadway";
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    position: absolute;
+    top: 1400px;
+    left: 170px;
+  }
+
+  #why_us{
+    font-family: "Broadway";
+    background-color: #df7861;
+    padding: 20px;
+    margin: 0 50px 50px 50px;
+    border-radius: 25px;
+    height: 1150px;
+  }
+
+  .choose_img{
+    margin-left: 200px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .choose_h{
+    text-align: center;
+    font-family: "Broadway";
+    margin-left: 160px;
+  }
+
+  .choose_p{
+    margin-left: 100px;
+    width: 300px;
+    text-align: center;
+    font-family: "Adobe Heiti Std";
+    font-size: 15px;
+  }
+
+  .choose_table{
+    margin: 0;
+  }
+
+  .natural{
+    position: absolute;
+    top: 1700px;
+  }
+
+  .tasty{
+    position: absolute;
+    top: 1950px;
+    left: 70px;
+  }
+
+.healthy{
+  position: absolute;
+  top: 2200px;
+}
+
+.economical{
+  position: absolute;
+  top: 2500px;
+  left: 70px;
+}
+
+  #download_section{
+    font-family: "Broadway";
+    margin-left: 60px;
+    width: 80%;
+    background-color: #fcf8e8;
+    border-radius: 25px;
+  }
+  .download_logo{
+    margin-left: 10px;
+    padding-left: 20px;
+    width: 200px;
+    height: 90px;
+  }
+
+  #contact_us{
+    position: absolute;
+    top: 2950px;
+    right: 40px;
+    font-family: "Broadway";
+    margin: 20px 100px;
+    background-color: #fcf8e8;
+    border-radius: 25px;
+  }
+  .contact_links{
+    padding-left: 20px;
+    width: 50px;
+    height: 50px;
+  }
 }
