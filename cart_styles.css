@@ -1,0 +1,219 @@
+body{
+  background-image: url("Images/nile.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  margin: 0;
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  margin: 0;
+  font-family: "Broadway";
+  color: black;
+  text-align: center;
+}
+
+
+img{
+  height: 300px;
+  width: 150px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+/* NAVBAR */
+.navbar{
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  border-radius: 0px 0px 25px 25px;
+  z-index: 2;
+}
+
+.main_title{
+  color: white;
+  font-family: "Brush Script MT";
+  font-size: 40px;
+  text-align: left;
+  padding-top: 0;
+  margin: 0;
+}
+
+.main_p{
+  color: white;
+  font-family: "Broadway";
+  font-size: 20px;
+  text-align: left;
+  padding-top: 0;
+  margin: 0;
+}
+
+.logo_image{
+  width: 80px;
+  height: 80px;
+}
+
+.external_links{
+  border-style: none none none solid;
+  border-color: #606060;
+  border-width: 1px;
+  text-align: center;
+  font-family: "Adobe Heiti Std";
+  color: white;
+  font-size: 20px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 620px;
+}
+
+.external_links:hover{
+  font-size: 21px;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: grey;
+}
+
+#product_details{
+  margin: 10px 50px 50px 50px;
+  height: 500px;
+  background-color: #d4e2d4;
+  padding: 20px;
+  border-radius: 25px;
+  height: 1100px;
+}
+
+#product_details{
+  margin: 10px 50px 50px 50px;
+  height: 450px;
+  background-color: #d4e2d4;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.preview_image{
+    margin-left: 100px;
+}
+
+.preview_text{
+  padding-left: 5px;
+  margin-left: 20px;
+  text-align: center;
+  font-family: "Adobe Heiti Std";
+  font-size: 20px;
+}
+
+.preview_desc{
+  position: absolute;
+  top: 380px;
+  left: 5px;
+  margin-left: 150px;
+  text-align: center;
+  font-family: "Adobe Heiti Std";
+  font-size: 15px;
+}
+
+.kiwi{
+  position: absolute;
+  width: 25%;
+}
+
+.mango{
+  position: absolute;
+  left: 350px;
+  width: 25%;
+}
+
+.peach{
+  position: absolute;
+  right: 350px;
+  width: 25%;
+}
+
+.papaya{
+  position: absolute;
+  right: 50px;
+  width: 25%;
+}
+
+.cart_btn{
+  margin-left: 100px;
+  font-family: "Adobe Heiti Std";
+  color: white;
+  padding: 10px;
+  font-size: 10px;
+  background-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.cart_btn:hover{
+  margin-left: 100px;
+  font-family: "Adobe Heiti Std";
+  color: black;
+  padding: 10px;
+  font-size: 10px;
+  background-color: white;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.form_label{
+  margin-left: 10px;
+  font-family: "Broadway";
+}
+
+.form_input{
+  display: block;
+  margin: 5px 10px 20px;
+  width: 40%;
+  opacity: 80%;
+  border-radius: 5px;
+}
+
+.form_input:focus{
+  border: 3px solid blue;
+}
+
+.more_products{
+  font-family: "Broadway";
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  background-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+  position: absolute;
+  top: 1050px;
+  left: 170px;
+}
+
+.more_products:hover{
+  color: black;
+  background-color: white;
+}
+
+.bill{
+  text-align: center;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  right: 300px;
+  top: 700px;
+}
+
+.bill_item{
+  font-family: "Adobe Heiti Std";
+}
+
+.bill_total{
+  border-style: dotted;
+  font-family: "Adobe Heiti Std";
+}

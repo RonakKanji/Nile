@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nile - Cart</title>
+    <link rel="stylesheet" href="cart_styles.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <table>
+        <tbody>
+          <tr>
+              <td><img class="logo_image" src="Images/logo.png" alt="Logo"></td>
+              <td class="main_title">
+                <h1 class="main_title">Nile</h1>
+                <p class="main_p">The Freshest Juice You Will Ever Drink</p>
+              </td>
+              <td class="external_links"><a href="index.html">Home</a></td>
+              <td class="external_links"><a href="login.html">Login/SignUp</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="product_details">
+      <div class="kiwi">
+        <img class="preview_image" src="Images/Kiwi.png" alt="Kiwi_Juice">
+        <h3 class="preview_text">Kiwi Sizzler</h3>
+        <h3 class="preview_desc">Counter</h3>
+        <button class="cart_btn" type="button" name="button">+</button>
+        <button class="cart_btn" type="button" name="button">-</button>
+
+      </div>
+      <div class="mango">
+        <img class="preview_image" src="Images/Mango.png" alt="Mango_Juice">
+        <h3 class="preview_text">Mango Blast</h3>
+        <h3 class="preview_desc">Counter</h3>
+        <button class="cart_btn" type="button" name="button">+</button>
+        <button class="cart_btn" type="button" name="button">-</button>
+      </div>
+
+      <div class="peach">
+        <img class="preview_image" src="Images/Peach.png" alt="Peach_Juice">
+          <h3 class="preview_text">Peach Punch</h3>
+          <h3 class="preview_desc">Counter</h3>
+          <button class="cart_btn" type="button" name="button">+</button>
+          <button class="cart_btn" type="button" name="button">-</button>
+      </div>
+
+      <div class="papaya">
+        <img class="preview_image" src="Images/Papaya.png" alt="Papaya_Juice">
+        <h3 class="preview_text">Papaya Yaga</h3>
+        <h3 class="preview_desc">Counter</h3>
+        <button class="cart_btn" type="button" name="button">+</button>
+        <button class="cart_btn" type="button" name="button">-</button>
+      </div>
+    </div>
+
+    <div id="product_details">
+      <form action="payment.html" method="post">
+
+              <label class="form_label" for="name">Full Name</label>
+              <input class="form_input" type="text" name="name" value="">
+
+              <label class="form_label" for="address">Address</label>
+              <textarea class="form_input" name="address" rows="3" cols="80"></textarea>
+
+              <label class="form_label" for="pin_code">Pin Code</label>
+              <input class="form_input" type="text" name="pin_code" value="">
+
+              <label class="form_label" for="phone">Phone Number</label>
+              <input class="form_input" type="text" name="phone" value="">
+
+              <label class="form_label" for="email">Email</label>
+              <input class="form_input" type="text" name="email" value="">
+
+        <button class="more_products" type="submit" name="button">Proceed to Checkout</button>
+      </form>
+
+      <div class="bill">
+        <h3 class="bill_table">Your Bill Details</h3>
+        <table class="bill_table">
+          <thead>
+            <th class="form_label">Product</th>
+            <th class="form_label">Quantity</th>
+            <th class="form_label">Price</th>
+            <th class="form_label">Total</th>
+          </thead>
+
+          <tbody>
+            <tr class="bill_item">
+              <td>Kiwi Sizzler</td>
+              <td>2</td>
+              <td>200</td>
+              <td>400</td>
+            </tr>
+
+            <tr class="bill_item">
+              <td>Mango Blast</td>
+              <td>5</td>
+              <td>150</td>
+              <td>750</td>
+            </tr>
+
+            <tr class="bill_item">
+              <td>Peach Punch</td>
+              <td>1</td>
+              <td>100</td>
+              <td>100</td>
+            </tr>
+
+            <tr class="bill_item">
+              <td>Papaya Yaga</td>
+              <td>2</td>
+              <td>200</td>
+              <td>400</td>
+            </tr>
+            <tr class="bill_total">
+              <td>Total</td>
+              <td></td>
+              <td></td>
+              <td>1650</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
