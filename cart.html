@@ -2,9 +2,106 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="Images/favicon.ico">
     <title>Nile - Cart</title>
     <link rel="stylesheet" href="cart_styles.css">
   </head>
+  <script>
+    function check_phone_num(){
+      var num = document.getElementById("phone_num").value;
+      if( num.length >= 10){
+        for(var i=0; i<num.length; i++){
+          if(num[i].charCodeAt(0) >= 48 && num[i].charCodeAt(0) <= 57){
+            console.log(num[i].charCodeAt(0));
+            document.getElementById("invalid_num").style.visibility = "hidden";
+          }
+          else{
+            document.getElementById("invalid_num").style.visibility = "visible";
+          }
+        }
+      }
+      else{
+        console.log("Invalid");
+        document.getElementById("invalid_num").style.visibility = "visible";
+      }
+    }
+
+    function check_email(){
+      var email = document.getElementById("email_id").value;
+      var flag = 0;
+      for(var i=0; i<email.length; i++){
+        flag = 0;
+        if(email[i] == "@"){
+          flag = 1;
+          var split_str = email.split("");
+          split_str.reverse();
+          if(split_str[0] == "m" && split_str[1] == "o" && split_str[2] == "c" && split_str[3] == "."){
+            flag = 1;
+          }
+          else{
+            flag = 0;
+          }
+          break;
+        }
+      }
+
+      if(flag == 1){
+        document.getElementById("invalid_email").style.visibility = "hidden";
+      }
+      else{
+        document.getElementById("invalid_email").style.visibility = "visible";
+      }
+    }
+
+    function check_name(){
+        var name = document.getElementById("full_name").value;
+        console.log(name);
+        var flag = 0;
+        for(var i=0; i<name.length; i++){
+          if((name[i].charCodeAt(0) >= 65 && name[i].charCodeAt(0) <= 90) || (name[i].charCodeAt(0) >= 97 && name[i].charCodeAt(0) <= 122) || name[i].charCodeAt(0) == 32){
+            flag = 1;
+          }
+          else{
+            flag = 0;
+            break;
+          }
+        }
+        if(flag == 1){
+        document.getElementById("invalid_name").style.visibility = "hidden";
+        }
+        else{
+          document.getElementById("invalid_name").style.visibility = "visible";
+        }
+    }
+
+    function decrement(event){
+      var actual_clicked_class = (event.parentNode.className);
+
+      var num_list = document.getElementsByClassName("preview_desc");
+      for(var i=0; i<num_list.length; i++){
+        if(num_list[i].parentNode.className == actual_clicked_class){
+          var num = parseInt(num_list[i].innerHTML);
+          if(num != 0){
+            num -= 1;
+          }
+          document.getElementsByClassName("preview_desc")[i].innerHTML = num;
+        }
+      }
+    }
+
+    function increment(event){
+      var actual_clicked_class = (event.parentNode.className);
+
+      var num_list = document.getElementsByClassName("preview_desc");
+      for(var i=0; i<num_list.length; i++){
+        if(num_list[i].parentNode.className == actual_clicked_class){
+          var num = parseInt(num_list[i].innerHTML);
+          num += 1;
+          document.getElementsByClassName("preview_desc")[i].innerHTML = num;
+        }
+      }
+    }
+  </script>
   <body>
     <div class="navbar">
       <table>
@@ -32,33 +129,33 @@
       <div class="kiwi">
         <img class="preview_image" src="Images/Kiwi.png" alt="Kiwi_Juice">
         <h3 class="preview_text">Kiwi Sizzler</h3>
-        <h3 class="preview_desc">Counter</h3>
-        <button class="cart_btn" type="button" name="button">-</button>
-        <button class="cart_btn" type="button" name="button">+</button>
+        <h3 class="preview_desc">10</h3>
+        <button class="cart_btn" type="button" name="button" onclick="decrement(this)">-</button>
+        <button class="cart_btn" type="button" name="button" onclick="increment(this)">+</button>
 
       </div>
       <div class="mango">
         <img class="preview_image" src="Images/Mango.png" alt="Mango_Juice">
         <h3 class="preview_text">Mango Blast</h3>
-        <h3 class="preview_desc">Counter</h3>
-        <button class="cart_btn" type="button" name="button">-</button>
-        <button class="cart_btn" type="button" name="button">+</button>
+        <h3 class="preview_desc">1</h3>
+        <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
+        <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
       </div>
 
       <div class="peach">
         <img class="preview_image" src="Images/Peach.png" alt="Peach_Juice">
           <h3 class="preview_text">Peach Punch</h3>
-          <h3 class="preview_desc">Counter</h3>
-          <button class="cart_btn" type="button" name="button">-</button>
-          <button class="cart_btn" type="button" name="button">+</button>
+          <h3 class="preview_desc">1</h3>
+          <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
+          <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
       </div>
 
       <div class="papaya">
         <img class="preview_image" src="Images/Papaya.png" alt="Papaya_Juice">
         <h3 class="preview_text">Papaya Yaga</h3>
-        <h3 class="preview_desc">Counter</h3>
-        <button class="cart_btn" type="button" name="button">-</button>
-        <button class="cart_btn" type="button" name="button">+</button>
+        <h3 class="preview_desc">1</h3>
+        <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
+        <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
       </div>
     </div>
 
@@ -66,7 +163,8 @@
       <form action="payment.html" method="post">
 
               <label class="form_label" for="name">Full Name</label>
-              <input class="form_input" type="text" name="name" value="">
+              <input id="full_name" class="form_input" type="text" name="name" value="" onkeyup="check_name()">
+              <p class="invalid_p" id="invalid_name">Invalid Name</p>
 
               <label class="form_label" for="address">Address</label>
               <textarea class="form_input" name="address" rows="3" cols="80"></textarea>
@@ -75,10 +173,12 @@
               <input class="form_input" type="text" name="pin_code" value="">
 
               <label class="form_label" for="phone">Phone Number</label>
-              <input class="form_input" type="text" name="phone" value="">
+              <input id="phone_num" class="form_input" type="text" name="phone" value="" onkeyup="check_phone_num()">
+              <p id="invalid_num" class="invalid_p">Enter valid number</p>
 
               <label class="form_label" for="email">Email</label>
-              <input class="form_input" type="text" name="email" value="">
+              <input id="email_id" class="form_input" type="text" name="email" value="" onkeyup="check_email()">
+              <p id="invalid_email" class="invalid_p">Invalid email address</p>
 
         <button class="more_products" type="submit" name="button">Proceed to Checkout</button>
       </form>

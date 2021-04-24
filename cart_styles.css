@@ -113,7 +113,7 @@ a{
 .preview_desc{
   position: absolute;
   top: 380px;
-  left: 5px;
+  left: 20px;
   margin-left: 150px;
   text-align: center;
   font-family: "Adobe Heiti Std";
@@ -172,11 +172,20 @@ a{
 
 .form_input{
   display: block;
-  margin: 5px 10px 20px;
+  margin: 5px 10px 5px;
   width: 40%;
   opacity: 80%;
   border-radius: 5px;
 }
+
+.invalid_p{
+  font-family: "Adobe Heiti Std";
+  font-size: 15px;
+  margin: 0 5px;
+  color: red;
+  visibility:hidden;
+}
+
 
 .form_input:focus{
   border: 3px solid blue;
