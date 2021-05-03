@@ -89,6 +89,7 @@ a{
 
 /* ABOUT_US */
 .about{
+  display: none;
   padding: 20px;
   transition: 0.8s;
 }
