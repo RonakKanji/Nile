@@ -2,9 +2,35 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <title>Nile</title>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        console.log($(this).scrollTop());
+        if($(this).scrollTop() > 100){
+          $(".about").css({"opacity": "0"});
+        }
+        else{
+          $(".about").css({"opacity": "1 "});
+        }
+        if($(this).scrollTop() > 750){
+          $("#product_details").css({"opacity": "0"});
+        }
+        else{
+          $("#product_details").css({"opacity": "1 "});
+        }
+        if($(this).scrollTop() > 1400){
+          $("#why_us").css({"opacity": "0"});
+        }
+        else{
+          $("#why_us").css({"opacity": "1 "});
+        }
+      });
+    })
+    </script>
   </head>
   <body>
     <div class="navbar">

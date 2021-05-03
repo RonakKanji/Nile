@@ -28,7 +28,6 @@ a{
   color: white;
 }
 
-
 /* NAVBAR */
 .navbar{
   background-color: black;
@@ -87,16 +86,9 @@ a{
   background-color: #d4e2d4;
   padding: 20px;
   border-radius: 25px;
-  height: 1100px;
+  transition: 0.8s;
 }
 
-#product_details{
-  margin: 10px 50px 50px 50px;
-  height: 450px;
-  background-color: #d4e2d4;
-  padding: 20px;
-  border-radius: 25px;
-}
 
 .preview_image{
     margin-left: 100px;
@@ -200,7 +192,7 @@ a{
   border-width: 1px;
   border-radius: 10px;
   position: absolute;
-  top: 1050px;
+  top: 1100px;
   left: 170px;
 }
 

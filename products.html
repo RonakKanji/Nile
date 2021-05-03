@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="products_style.css">
     <title>Products</title>
   </head>
   <body>
-
     <div class="navbar">
       <table>
         <tbody>
@@ -18,20 +18,21 @@
                 <p class="main_p">The Freshest Juice You Will Ever Drink</p>
               </td>
               <td class="external_links"><a href="index.html">Home</a></td>
-              <td class="external_links"><a href="cart.html">Cart</a></td>
+              <td id="cart_page" class="external_links"><a href="cart.html">Cart</a></td>
               <td class="external_links"><a href="login.html">Login/SignUp</a></td>
           </tr>
         </tbody>
       </table>
     </div>
-
+    <div id="circle_dot">
+    </div>
     <br>
     <br>
     <br>
     <br>
     <br>
 
-    <div id="product_details">
+    <div id="product_details" class="prod_1">
       <div class="kiwi">
         <img class="preview_image" src="Images/Kiwi.png" alt="Kiwi_Juice">
         <h3 class="preview_text">Kiwi Sizzler</h3>
@@ -61,7 +62,7 @@
       </div>
     </div>
 
-    <div id="product_details">
+    <div id="product_details" class="prod_2">
       <div class="blueberry">
         <img class="preview_image" src="Images/Blueberry.png" alt="Blueberry_Juice">
         <h3 class="preview_text">Bleu Blueberry</h3>
@@ -121,4 +122,6 @@
       </div>
     </div>
   </body>
+  <script src="products_script.js">
+  </script>
 </html>

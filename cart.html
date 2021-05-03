@@ -2,9 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="Images/favicon.ico">
     <title>Nile - Cart</title>
     <link rel="stylesheet" href="cart_styles.css">
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          if($(this).scrollTop() > 150){
+            $(".prod_1").css({"opacity": "0"});
+          }
+          else{
+            $(".prod_1").css({"opacity": "1 "});
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="navbar">
@@ -29,39 +42,39 @@
     <br>
     <br>
 
-    <div id="product_details">
-      <div class="kiwi">
-        <img class="preview_image" src="Images/Kiwi.png" alt="Kiwi_Juice">
-        <h3 class="preview_text">Kiwi Sizzler</h3>
-        <h3 class="preview_desc">10</h3>
-        <button class="cart_btn" type="button" name="button" onclick="decrement(this)">-</button>
-        <button class="cart_btn" type="button" name="button" onclick="increment(this)">+</button>
+    <div id="product_details" class="prod_1">
+              <div class="kiwi">
+                <img class="preview_image" src="Images/Kiwi.png" alt="Kiwi_Juice">
+                <h3 class="preview_text">Kiwi Sizzler</h3>
+                <h3 class="preview_desc">10</h3>
+                <button class="cart_btn" type="button" name="button" onclick="decrement(this)">-</button>
+                <button class="cart_btn" type="button" name="button" onclick="increment(this)">+</button>
+              </div>
+              <div class="mango">
+                <img class="preview_image" src="Images/Mango.png" alt="Mango_Juice">
+                <h3 class="preview_text">Mango Blast</h3>
+                <h3 class="preview_desc">1</h3>
+                <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
+                <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
+              </div>
+
+              <div class="peach">
+                <img class="preview_image" src="Images/Peach.png" alt="Peach_Juice">
+                  <h3 class="preview_text">Peach Punch</h3>
+                  <h3 class="preview_desc">1</h3>
+                  <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
+                  <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
+              </div>
+              <div class="papaya">
+                <img class="preview_image" src="Images/Papaya.png" alt="Papaya_Juice">
+                <h3 class="preview_text">Papaya Yaga</h3>
+                <h3 class="preview_desc">1</h3>
+                <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
+                <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
+              </div>
 
       </div>
-      <div class="mango">
-        <img class="preview_image" src="Images/Mango.png" alt="Mango_Juice">
-        <h3 class="preview_text">Mango Blast</h3>
-        <h3 class="preview_desc">1</h3>
-        <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
-        <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
-      </div>
 
-      <div class="peach">
-        <img class="preview_image" src="Images/Peach.png" alt="Peach_Juice">
-          <h3 class="preview_text">Peach Punch</h3>
-          <h3 class="preview_desc">1</h3>
-          <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
-          <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
-      </div>
-
-      <div class="papaya">
-        <img class="preview_image" src="Images/Papaya.png" alt="Papaya_Juice">
-        <h3 class="preview_text">Papaya Yaga</h3>
-        <h3 class="preview_desc">1</h3>
-        <button class="cart_btn" type="button" onclick="decrement(this)" name="button">-</button>
-        <button class="cart_btn" type="button" onclick="increment(this)" name="button">+</button>
-      </div>
-    </div>
 
     <div id="product_details">
       <form action="payment.html" method="post" autocomplete="off">
@@ -97,7 +110,7 @@
             <th class="form_label">Total</th>
           </thead>
 
-          <tbody>
+          <tbody id="billing">
             <tr class="bill_item">
               <td>Kiwi Sizzler</td>
               <td>2</td>
@@ -137,6 +150,5 @@
     </div>
   </body>
   <script src="cart_script.js">
-
   </script>
 </html>

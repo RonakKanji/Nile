@@ -89,6 +89,7 @@ function decrement(event){
         num -= 1;
       }
       document.getElementsByClassName("preview_desc")[i].innerHTML = num;
+      generate_bill()
     }
   }
 }
@@ -102,6 +103,33 @@ function increment(event){
       var num = parseInt(num_list[i].innerHTML);
       num += 1;
       document.getElementsByClassName("preview_desc")[i].innerHTML = num;
+      generate_bill();
     }
   }
+}
+
+function generate_bill(){
+  var items = document.getElementsByClassName("preview_desc");
+  var item_names = document.getElementsByClassName("preview_text");
+  var billed = document.getElementsByClassName("bill_item");
+  if(billed.length == 0){
+  for(var i=0; i<items.length; i++){
+      var table = document.getElementById("billing");
+      var row = table.insertRow(0);
+      row.setAttribute("class", "bill_item");
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = item_names[i].innerHTML
+      cell2.innerHTML = items[i].innerHTML;
+    }
+  }
+  else{
+    for(var j=0; j<billed.length; j++){
+      for(var i=0; i<item_names.length; i++){
+        if(billed[j].childNodes[1].innerHTML == item_names[i].innerHTML){
+          billed[j].childNodes[3].innerHTML = items[i].innerHTML;
+        }
+      }
+      }
+    }
 }

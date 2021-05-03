@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   background-image: url("Images/nile.jpg");
   background-repeat: no-repeat;
@@ -86,6 +90,7 @@ a{
 /* ABOUT_US */
 .about{
   padding: 20px;
+  transition: 0.8s;
 }
 .about_header{
   margin-top: 100px;
@@ -123,6 +128,7 @@ a{
   background-color: #d4e2d4;
   padding: 20px;
   border-radius: 25px;
+  transition: 0.8s;
 }
 
 .product_heading{
@@ -225,6 +231,7 @@ a{
   margin: 0 50px 50px 50px;
   height: 650px;
   border-radius: 25px;
+  transition: 0.8s;
 }
 
 .choose_img{
@@ -333,7 +340,7 @@ a{
     padding-left: 20px;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media screen and (max-width: 700px) {
   body{
     background-image: url("Images/phone_bg.jpg");
     background-repeat: no-repeat;
@@ -470,7 +477,7 @@ a{
     padding: 10px;
     font-size: 20px;
     background-color: black;
-    border-width: 1px;
+    border-width: 5px;
     border-radius: 10px;
     position: absolute;
     top: 1400px;
@@ -483,7 +490,7 @@ a{
     padding: 10px;
     font-size: 20px;
     background-color: white;
-    border-width: 1px;
+    border-width: 5px;
     border-radius: 10px;
     position: absolute;
     top: 1400px;

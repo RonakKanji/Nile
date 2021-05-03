@@ -28,6 +28,17 @@ a{
   color: white;
 }
 
+#circle_dot {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  top: 30px;
+  right: 160px;
+}
 
 /* NAVBAR */
 .navbar{
@@ -88,6 +99,7 @@ a{
   background-color: #d4e2d4;
   padding: 20px;
   border-radius: 25px;
+  transition: 0.8s;
 }
 
 .preview_image{
@@ -107,6 +119,31 @@ a{
   font-family: "Adobe Heiti Std";
   font-size: 15px;
 }
+
+.quantity{
+  display: inline;
+  padding: 0 10px 0 70px;
+  text-align: center;
+  font-family: "Adobe Heiti Std";
+  font-size: 20px;
+}
+
+.quantity_btn{
+  margin-left: 70px;
+  font-family: "Broadway";
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  background-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.quantity_btn:hover{
+  color: black;
+  background-color: white;
+}
+
 
 .kiwi{
   position: absolute;
