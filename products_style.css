@@ -34,7 +34,7 @@ a{
   background: red;
   border-radius: 50%;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   z-index: 5;
   top: 30px;
   right: 160px;
