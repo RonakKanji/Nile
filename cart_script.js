@@ -39,10 +39,10 @@ function check_email(){
 
   if(flag == 1){
     document.getElementById("invalid_email").style.visibility = "hidden";
-    return 1;
   }
   else{
     document.getElementById("invalid_email").style.visibility = "visible";
+    return 0;
   }
 }
 
@@ -61,20 +61,21 @@ function check_name(){
     }
     if(flag == 1){
     document.getElementById("invalid_name").style.visibility = "hidden";
-    return 1;
     }
     else{
       document.getElementById("invalid_name").style.visibility = "visible";
+      return 0;
     }
 }
 
 function check_submit(){
-  if(check_name() && check_email() && check_phone_num()){
-    return true;
-  }
-  else{
+  if(check_name() == 0 && check_email() == 0 && check_phone_num() == 0){
     alert("Please Check Your Deatils");
     return false;
+  }
+  else{
+    console.log("Here");
+    return true;
   }
 }
 
