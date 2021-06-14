@@ -72,6 +72,18 @@ a{
   height: 80px;
 }
 
+.search_form{
+  padding-left: 150px;
+}
+
+#search_juices{
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  height: 20px;
+  width: 150px;
+}
+
 .external_links{
   border-style: none none none solid;
   border-color: #606060;
@@ -83,7 +95,7 @@ a{
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  left: 550px;
+  left: 220px;
 }
 
 .external_links:hover{

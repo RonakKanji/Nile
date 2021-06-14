@@ -6,6 +6,33 @@
     <link rel="icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="products_style.css">
     <title>Products</title>
+    <script>
+      function searchBar(name){
+            var x = document.getElementById("juices");
+            while (x.firstChild) {
+                x.removeChild(x.lastChild);
+            }
+            if (name.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var elements = this.responseText;
+                        elements = elements.split("|");
+                        for(var i=0; i< elements.length; i++){
+                            var option = document.createElement("option");
+                            option.text = elements[i];
+                            document.getElementById("juices").appendChild(option);
+                        }
+                    }
+                };
+                xmlhttp.open("GET", "ajax_text_php.php?name=" + name, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
   </head>
   <body>
     <div class="navbar">
@@ -17,6 +44,11 @@
                 <h1 class="main_title">Nile</h1>
                 <p class="main_p">The Freshest Juice You Will Ever Drink</p>
               </td>
+              <td> <form class="search_form" autocomplete="off">
+                🔍 <input id="search_juices" list="juices" name="name" type="text" onkeyup="searchBar(this.value)">
+                <datalist id="juices">
+                  
+                </datalist></form> </td>
               <td class="external_links"><a href="index.html">Home</a></td>
               <td id="cart_page" class="external_links"><a href="cart.html">Cart</a></td>
               <td class="external_links"><a href="login.html">Login/SignUp</a></td>
@@ -36,28 +68,28 @@
       <div class="kiwi">
         <img class="preview_image" src="Images/Kiwi.png" alt="Kiwi_Juice">
         <h3 class="preview_text">Kiwi Sizzler</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹299</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
 
       </div>
       <div class="mango">
         <img class="preview_image" src="Images/Mango.png" alt="Mango_Juice">
         <h3 class="preview_text">Mango Blast</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹199</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="peach">
         <img class="preview_image" src="Images/Peach.png" alt="Peach_Juice">
           <h3 class="preview_text">Peach Punch</h3>
-          <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="preview_desc">₹299</p>
           <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="papaya">
         <img class="preview_image" src="Images/Papaya.png" alt="Papaya_Juice">
         <h3 class="preview_text">Papaya Yaga</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹249</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
     </div>
@@ -66,28 +98,28 @@
       <div class="blueberry">
         <img class="preview_image" src="Images/Blueberry.png" alt="Blueberry_Juice">
         <h3 class="preview_text">Bleu Blueberry</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹349</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="watermelon">
         <img class="preview_image" src="Images/Watermelon.png" alt="Watermelon_Juice">
         <h3 class="preview_text">Watermelon Delight</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹199</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="strawberry">
         <img class="preview_image" src="Images/Strawberry.png" alt="Strawberry_Juice">
         <h3 class="preview_text">Supreme Strawberry</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹249</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="avocado">
         <img class="preview_image" src="Images/Avocado.png" alt="Avocado_Juice">
         <h3 class="preview_text">Avocado Amze</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹399</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
     </div>
@@ -96,28 +128,28 @@
       <div class="orange">
         <img class="preview_image" src="Images/Watermelon.png" alt="Watermelon_Juice">
         <h3 class="preview_text">Rang de Orange</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹99</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="carrot">
         <img class="preview_image" src="Images/Carrot.png" alt="Carrot_Juice">
         <h3 class="preview_text">24 Carrot Gold</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹149</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="rasberry">
         <img class="preview_image" src="Images/Rasberry.png" alt="Rasberry_Juice">
         <h3 class="preview_text">Rasila Rasberry</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹199</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
 
       <div class="jamun">
         <img class="preview_image" src="Images/Jamun.png" alt="Jamun_Juice">
         <h3 class="preview_text">Joshila Jamun</h3>
-        <p class="preview_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="preview_desc">₹149</p>
         <button class="add_to_cart" type="button" name="button">Add to Cart</button>
       </div>
     </div>
