@@ -3,7 +3,6 @@
     $name = $_REQUEST["name"];
     $hint = "";
 
-    // lookup all hints from array if $q is different from ""
     if ($name !== "") {
         $name = strtolower($name);
         $len=strlen($name);
@@ -18,6 +17,5 @@
         }
     }
 
-    // Output "no suggestion" if no hint was found or output correct values
     echo $hint === "" ? "no suggestion" : $hint;
 ?>

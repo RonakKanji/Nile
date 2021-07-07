@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body{
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/nile_payment_bg.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/nile.jpg);
 	background-size: cover;
 }
 .app-container{
@@ -20,7 +20,7 @@ body{
 	height: 150px;
 	background-color: #9100fb;
 	border-bottom-left-radius: 80px;
-	border-bottom-right-radius: 80px; 
+	border-bottom-right-radius: 80px;
 
 }
 .top-box p{
@@ -88,7 +88,7 @@ body{
 }
 .name-field-group{
 	margin-top: 10px;
-	
+
 }
 .card-num-field, .name-field{
 	width: 220px;
@@ -115,4 +115,3 @@ body{
 	cursor: pointer;
 	border:none;
 }
-

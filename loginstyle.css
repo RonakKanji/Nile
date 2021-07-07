@@ -7,17 +7,18 @@
 .hero{
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/nile_login_bg.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(Images/nile.jpg);
 	background-position: center;
 	background-size: cover;
 	position: absolute;
 }
 .form-box{
+	border-radius: 25px;
 	width: 380px;
 	height: 480px;
 	position: relative;
 	margin: 6% auto;
-	background:#fff;
+	background:#d4e2d4;
 	padding: 5px;
 	overflow: hidden;
 }
@@ -51,7 +52,7 @@
 	top: 180px;
 	position: absolute;
 	width: 280px;
-	transition:.5s; 
+	transition:.5s;
 }
 .input-field{
 	width: 100%;

@@ -110,6 +110,51 @@ function check_submit(){
   }
 }
 
+function calculate_sum(){
+  var sum =0;
+  var billed = document.getElementsByClassName("bill_item");
+  for(var i=0; i<billed.length; i++){
+    sum += parseInt(billed[i].childNodes[3].innerHTML);
+  }
+  total_price = document.getElementById('total_price');
+  total_price.value = sum;
+}
+
+function generate_bill(){
+  var items = document.getElementsByClassName("preview_desc");
+  var item_names = document.getElementsByClassName("preview_text");
+  var billed = document.getElementsByClassName("bill_item");
+  console.log(billed);
+  var sum = 0;
+  if(billed.length == 0){
+  for(var i=0; i<items.length; i++){
+      var table = document.getElementById("billing");
+      var row = table.insertRow(0);
+      row.setAttribute("class", "bill_item");
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3)
+      cell1.innerHTML = item_names[i].innerHTML
+      cell2.innerHTML = items[i].innerHTML;
+      cell3.innerHTML = 100;
+      cell4.innerHTML = items[i].innerHTML * 100;
+    }
+  }
+  else{
+    for(var j=0; j<billed.length; j++){
+      for(var i=0; i<item_names.length; i++){
+        if(billed[j].childNodes[0].innerHTML == item_names[i].innerHTML){
+          billed[j].childNodes[1].innerHTML = items[i].innerHTML;
+          billed[j].childNodes[3].innerHTML = items[i].innerHTML * 100;
+        }
+      }
+      }
+    }
+    calculate_sum()   
+}
+
+
 function decrement(event){
   var actual_clicked_class = (event.parentNode.className);
 
@@ -128,7 +173,6 @@ function decrement(event){
 
 function increment(event){
   var actual_clicked_class = (event.parentNode.className);
-
   var num_list = document.getElementsByClassName("preview_desc");
   for(var i=0; i<num_list.length; i++){
     if(num_list[i].parentNode.className == actual_clicked_class){
@@ -138,30 +182,4 @@ function increment(event){
       generate_bill();
     }
   }
-}
-
-function generate_bill(){
-  var items = document.getElementsByClassName("preview_desc");
-  var item_names = document.getElementsByClassName("preview_text");
-  var billed = document.getElementsByClassName("bill_item");
-  if(billed.length == 0){
-  for(var i=0; i<items.length; i++){
-      var table = document.getElementById("billing");
-      var row = table.insertRow(0);
-      row.setAttribute("class", "bill_item");
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      cell1.innerHTML = item_names[i].innerHTML
-      cell2.innerHTML = items[i].innerHTML;
-    }
-  }
-  else{
-    for(var j=0; j<billed.length; j++){
-      for(var i=0; i<item_names.length; i++){
-        if(billed[j].childNodes[1].innerHTML == item_names[i].innerHTML){
-          billed[j].childNodes[3].innerHTML = items[i].innerHTML;
-        }
-      }
-      }
-    }
 }
