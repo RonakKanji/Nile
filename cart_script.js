@@ -1,11 +1,5 @@
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    document.getElementById("cart_items").innerHTML = this.responseText;
-  }
-};
-xhttp.open("GET", "cart_details.txt", true);
-xhttp.send();
+generate_bill()
+
 
 function check_phone_num(){
   var num = document.getElementById("phone_num").value;
@@ -183,3 +177,5 @@ function increment(event){
     }
   }
 }
+
+

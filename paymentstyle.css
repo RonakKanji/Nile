@@ -21,7 +21,7 @@ body{
 	background-color: #9100fb;
 	border-bottom-left-radius: 80px;
 	border-bottom-right-radius: 80px;
-
+	
 }
 .top-box p{
 	text-align: center;
@@ -114,4 +114,11 @@ body{
 	width: 230px;
 	cursor: pointer;
 	border:none;
+}
+
+.user-box{
+	border-radius: 25px;
+	padding: 50px;
+	width: 400px;
+	background-color: white;
 }

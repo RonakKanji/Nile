@@ -24,6 +24,12 @@
 	<link rel="stylesheet" type="text/css" href="paymentstyle.css">
 </head>
 <body>
+<p class='user-box'>
+		Dear <?php echo $order_details['name'] ?>, your item will be delivered to you on the following address:
+		<?php echo $order_details['address'] ?> in 7 days. 
+		Verify the OTP that you will recevie in your phone 
+		<?php echo $order_details['phone_num'] ?> or by your email <?php echo $order_details['email'] ?>
+	</p>
 <div class="app-container">
 	<div class="top-box">
 	<p>PAYMENT</p>

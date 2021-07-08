@@ -22,3 +22,12 @@ $(document).ready(function(){
     }
   });
 })
+
+var query = window.location.search;
+if(query){
+  var logout_btn = document.getElementsByClassName('external_links');
+  logout_btn = logout_btn[3].childNodes[0];
+  console.log(logout_btn.text);
+  logout_btn.text = 'Logout';
+  logout_btn.href = 'logout.php';
+}
